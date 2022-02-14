@@ -7,8 +7,8 @@ app.use('/',require('./routes/index'));
 
 //setting up viewengine ejs
 
-app.use('view engine','ejs');
-app.use('views','./views');
+app.set('view engine','ejs');
+app.set('views','./views');
 
 app.listen(port,function(err){
     if(err)
