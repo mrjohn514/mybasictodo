@@ -1,0 +1,29 @@
+<!-- 
+we wiil remove the variable part of evey webpage and this file will contain
+the common part of differnt webpage 
+or
+basically we are wrapping the variable part inside common part
+
+so before rendring user.js my laout is filled with user.js at body and render at browser by controler
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+</head>
+<body>
+    
+
+<%- include('_header');%>
+
+ <%- body%>        <!-- this is the variabal part which will replace here body here body is syntac from their libaray-->   
+
+<%- include('_footer');%>
+
+</body>
+</html>

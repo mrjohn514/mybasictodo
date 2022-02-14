@@ -1,6 +1,13 @@
 const express = require('express');
 const port=8000;
 const app= express();
+const expresslayouts=require('express-ejs-layouts');
+
+/*here we to require layout before routes becaues routes have views which are rendered 
+so before that we have to tell all views belong to some sort of a layout or
+ */
+
+app.use(expresslayouts);  
 
 /// here we are using express router and now get post will handle by this moudle now
 app.use('/',require('./routes/index'));
