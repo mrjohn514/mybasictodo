@@ -3,6 +3,10 @@ const port=8000;
 const app= express();
 const expresslayouts=require('express-ejs-layouts');
 
+//addint static files
+app.use(express.static('./assets'));
+
+
 /*here we to require layout before routes becaues routes have views which are rendered 
 so before that we have to tell all views belong to some sort of a layout or
  */
