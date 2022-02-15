@@ -13,6 +13,12 @@ so before that we have to tell all views belong to some sort of a layout or
 
 app.use(expresslayouts);  
 
+
+//extracting styles and scripts from subpages to layouts
+app.set('layout extractStyles',true);
+app.set('layout extractscripts',true);
+
+
 /// here we are using express router and now get post will handle by this moudle now
 app.use('/',require('./routes/index'));
 

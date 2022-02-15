@@ -15,8 +15,13 @@ so before rendring user.js my laout is filled with user.js at body and render at
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title%></title>
+    
     <!-- /css/layout.css  here forward slash means look into assets as we set this by writing app.use(express.static) like this -->
     <link rel="stylesheet" href="/css/layout.css">
+
+    <!-- here css of different sub webpages will linked -->
+    <%- style %>
+
 </head>
 <body>
     
@@ -26,6 +31,7 @@ so before rendring user.js my laout is filled with user.js at body and render at
  <%- body%>        <!-- this is the variabal part which will replace here body here body is syntac from their libaray-->   
 
 <%- include('_footer');%>
+
 
 </body>
 </html>
